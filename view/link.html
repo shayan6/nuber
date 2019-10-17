@@ -1,0 +1,91 @@
+
+    <title>Nuber Dashboard</title>
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="template language" name="keywords">
+    <meta content="Tamerlan Soziev" name="author">
+    <meta content="Admin dashboard html template" name="description">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="../img/tez.png" rel="shortcut icon">
+    <link href="../img/tez.png" rel="apple-touch-icon">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet" type="text/css">
+    <link href="../bower_components/select2/dist/css/select2.min.css" rel="stylesheet">
+    <link href="../bower_components/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <link href="../bower_components/dropzone/dist/dropzone.css" rel="stylesheet">
+    <link href="../bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="../bower_components/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
+    <link href="../bower_components/perfect-scrollbar/css/perfect-scrollbar.min.css" rel="stylesheet">
+    <link href="../css/main.css?version=3.5.1" rel="stylesheet">
+    <link href="../icon_fonts_assets/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <link href="../icon_fonts_assets/themefy/themify-icons.css" rel="stylesheet">
+    <link href="../icon_fonts_assets/picons-thin/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/tez-style.css">
+    <script src="../bower_components/moment/moment.js"></script>
+
+    <script type="text/javascript">
+        var baseURL = "http://localhost/nuber/index.php";
+          
+        // how much time taking a page to load
+        console.time('dcode');
+    </script>
+    <style type="text/css">
+        .content-i{
+             margin: 0px 20px 0px 20px;
+        }
+        @media only screen and (max-width: 767px) {
+            .content-i {
+                 margin: 0px;
+            }
+            .el-chart-w{
+
+                overflow: scroll;
+                height: 300px;
+                width: 646px;
+            }
+            .pipeline.white, .element-box{
+                overflow: scroll;
+            }
+            .content-box{
+                padding: 5px;
+            }
+        }
+        .content-w{
+             padding-bottom:50px;
+        }
+        .pipeline.white .pipeline-header .pipeline-settings {
+            color: rgb(0, 0, 0);
+        }
+    </style>
+
+    <script type="text/javascript">
+        var parts = window.location.search.substr(1).split("&");
+        var querySelector = {};
+        for (var i = 0; i < parts.length; i++) {
+          var temp = parts[i].split("=");
+          querySelector[decodeURIComponent(temp[0])] = decodeURIComponent(temp[1]);
+        }
+        if(querySelector['startDate'] === 'undefined' || querySelector['startDate'] === undefined){
+            
+            var startDate = new Date('01/25/2018').toISOString().slice(0, 19).replace('T', ' ');
+            
+            if(querySelector['endDate'] === 'undefined' || querySelector['endDate'] === undefined){
+                var endDate = new Date();
+                endDate.setDate(endDate.getDate() - 1);
+                endDate = new Date(endDate).toISOString().slice(0, 19).replace('T', ' ');
+            }else{
+                var endDate = new Date(querySelector.endDate).toISOString().slice(0, 19).replace('T', ' ');
+            }
+        }
+        else{
+            var startDate = new Date(querySelector['startDate']).toISOString().slice(0, 19).replace('T', ' ');
+            var endDate = new Date(querySelector.endDate).toISOString().slice(0, 19).replace('T', ' ');
+        }
+
+
+        // for changeing locaion without php
+        function wLocation( address, locName ){
+            window.location.href=`${address}?startDate=${querySelector['startDate']}&endDate=${querySelector['endDate']}&location=${locName}`;
+        }
+
+
+    </script>

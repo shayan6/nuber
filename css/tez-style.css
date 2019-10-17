@@ -1,0 +1,242 @@
+@media (max-width: 1650px){
+  body{
+    padding: 10px;
+  }
+}
+.box-style, .user-profile, .element-box, .invoice-w, .big-error-w, .activity-boxes-w .activity-box, .projects-list .project-box, .pipeline.white{
+    /*box-shadow: 0px 2px 4px rgba(126,142,177,0.12);*/
+}
+/*Tez Font ********************************************************************/
+@font-face {
+    font-family: "myfont";
+    src: url("./leaguespartan-bold.woff") format('woff');
+} 
+.value{
+  font-style: "myfont";
+}
+
+/*tez table default **********************************************************/
+.table th, .table td{
+  padding: 0.2rem 0.4rem;
+}
+thead tr th:nth-child(1){
+  width: 12%;
+}
+.pagination .btn-sm{
+  padding: 0;
+}
+.top-menu-secondary {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+/*Tez CSS ********************************************************************/
+.top-menu-secondary .top-icon {
+    color: #00c367;
+}
+.top-menu-secondary > ul li a:after {
+    background-color: #00c367;
+}
+
+.btn-success{
+    background-color: #00c367;
+    border-color: #00c367;
+
+}
+.btn-success:hover {
+    color: #fff;
+    background-color: rgb(6, 134, 104);
+    border-color: rgb(6, 134, 104);
+}
+.pipeline.white.lined-success {
+    border-top: 5px solid #00c367;
+}
+.ranges li {
+    font-size: 13px;
+    background-color: #f5f5f5;
+    border: 1px solid #f5f5f5;
+    border-radius: 4px;
+    color:  #00c367;
+    padding: 3px 12px;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+.ranges li.active {
+    background-color:  #00c367;
+    border: 1px solid  #00c367;
+    color: #fff;
+}
+
+.ranges li:hover {
+    font-size: 13px;
+    background-color:  #00c367;
+    border: 1px solid  #00c367;
+    border-radius: 4px;
+    color: #fff;
+    padding: 3px 12px;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+body .daterangepicker td.active, body .daterangepicker td.active:hover {
+        background-color: #00c367;
+    }
+
+.page-item.active .page-link{
+	 background-color: #00c367;
+	 border-color: #00c367;
+}
+.element-wrapper .element-header:after, .step-triggers .step-trigger:before {
+	 background-color: #00c367;
+}
+.btn-link {
+    color: #00c367;
+}
+
+.btn-link:hover {
+    color: rgb(6, 134, 104);
+}
+.os-dropdown {
+    background-color: #00c367;
+}
+
+/*loader*/
+
+#preloader {
+  overflow: hidden;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999999;
+  background: linear-gradient(to bottom right, #3ad18a, #1c6fb5);
+}
+#tez-loader{
+  background-image: url(../img/bg-pattern2.png); 
+  height: 100%;
+  width: 100%;
+  padding-top: 20%;
+}
+#tez-loader img{
+margin-left: auto;
+margin-right: auto;
+display: block;
+height: 150px;
+width: auto;
+}
+
+/*map tap and link color*/
+.nav-pills .nav-link.active, .nav-pills .nav-item.show .nav-link {
+    background-color: #00c367;
+}
+.nav-tabs .nav-link:after, .nav-tabs .nav-item .nav-link:after {
+    background-color: #00c367;
+}
+
+/*scrol bar style *********************************************************/
+.scroll-bar::-webkit-scrollbar-track, .dropdown-menu::-webkit-scrollbar-track
+{
+  background-color: #F5F5F5;
+}
+
+.scroll-bar::-webkit-scrollbar, .dropdown-menu::-webkit-scrollbar
+{
+  width: 10px;
+  height: 10px;
+  background-color: #F5F5F5;
+}
+
+.scroll-bar::-webkit-scrollbar-thumb, .dropdown-menu::-webkit-scrollbar-thumb
+{
+  background-color: #a3a3a38a;
+}
+
+/*filter side bar style ***************************************************/
+.todo-app-w .todo-sidebar .todo-sidebar-section-header {
+    color: #00c367;
+  }
+  .todo-app-w .todo-sidebar ul.projects-list li:before {
+    color: #00c367;
+  }
+  .todo-app-w .todo-sidebar ul.projects-list li.add-new-project a {
+    color: #00c367;
+    border-bottom: 1px solid #00c367;
+  }
+  .todo-app-w .todo-sidebar .todo-sidebar-section-toggle {
+    color: #00c367;
+  }
+  .todo-app-w .todo-sidebar .todo-sidebar-section-sub-section .todo-sidebar-section-sub-header h6 {
+    color: #3e4b5b;
+  }
+
+  .rentals-list-w .filter-side .filter-header:before {
+    background-color: #00c367;
+  }
+  
+  /*datepicker */
+  body .daterangepicker td.active, body .daterangepicker td.active:hover {
+    background-color: #00c367 !important;
+  }
+
+  /*tez style retail list #####################################################*/
+  .tezStyle .rentals-list-w .filter-side .filter-body {
+      padding: 16px 20px;
+  }
+  .tezStyle .rentals-list-w .filter-side {
+      flex: 0 0 285px;
+  }
+  #scroll-bar-new{
+    max-height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  .rentals-list-w::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+  }
+
+/*scroll bar v2 #################################################################*/
+/* The main scrollbar **track** CSS class  */
+.mylistview .scroll-bar:horizontal .track,
+.mylistview .scroll-bar:vertical .track{
+  -fx-background-color:transparent;
+  -fx-border-color:transparent;
+  -fx-background-radius: 0em;
+  -fx-border-radius:2em;
+}
+ 
+/* The increment and decrement button CSS class of scrollbar */
+.mylistview .scroll-bar:horizontal .increment-button ,
+.mylistview .scroll-bar:horizontal .decrement-button {
+    -fx-background-color:transparent;
+  -fx-background-radius: 0em;
+  -fx-padding:0 0 10 0;
+ 
+}
+ 
+/* The increment and decrement button CSS class of scrollbar */
+ 
+.mylistview .scroll-bar:vertical .increment-button ,
+.mylistview .scroll-bar:vertical .decrement-button {
+ 
+    -fx-background-color:transparent;
+  -fx-background-radius: 0em;
+  -fx-padding:0 10 0 0;
+ 
+}
+ 
+.mylistview  .scroll-bar .increment-arrow,
+.mylistview  .scroll-bar .decrement-arrow,
+ {
+  -fx-shape: " "; 
+  -fx-padding:0;
+}
+ 
+/* The main scrollbar **thumb** CSS class which we drag every time (movable) */
+.mylistview .scroll-bar:horizontal .thumb,
+.mylistview .scroll-bar:vertical .thumb {
+    -fx-background-color:derive(black,90%);
+  -fx-background-insets: 2, 0, 0;
+  -fx-background-radius: 2em;
+ 
+}

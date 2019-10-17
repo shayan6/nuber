@@ -1,0 +1,53 @@
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<style type="text/css">
+  @media (min-width: 992px){
+    .modal-lg {
+        max-width: 1000px;
+    }
+  }
+</style>
+<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="exampleModal1" role="dialog" tabindex="-1">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header faded smaller">
+        <h5 class="modal-title" id="exampleModalLabel">
+          Modal title
+        </h5>
+        <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true"> &times;</span></button>
+      </div>
+      <div class="modal-body scroll-bar" style="height: 400px; overflow-y: auto;">
+        <table class="table table-striped table-lightfont" id="timeStampTable">
+          <thead  id="entitiesHead">
+            <tr>
+              <th>
+                Phone
+              </th>
+              <th>
+                CNIC
+              </th>
+              <th class="modal-title">
+                
+              </th>
+            </tr>
+          </thead>
+          <tbody id="entities">
+          </tbody>
+        </table> 
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-dismiss="modal" type="button"> Close</button>
+        <button class="btn btn-success" type="button" onclick="exportTableToConvertion('convertion.csv'); spiner();">
+         Download Excel <i class="fa fa-refresh fa-spin" style="display: none; margin: 0 5px 0 10px"></i> 
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  function spiner(argument) {
+    $('.fa-refresh').toggle('slow');
+    setTimeout(function(){
+      $('.fa-refresh').toggle('slow');
+    }, 1500);   
+  }
+</script>
